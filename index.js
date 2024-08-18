@@ -43,5 +43,4 @@ document.addEventListener('DOMContentLoaded', function () {
             newRow.insertCell(3).textContent = entry.dob;
             newRow.insertCell(4).textContent = entry.acceptTerms;
         });
-    }
-});
+    });
