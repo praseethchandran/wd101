@@ -8,11 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     dobInput.setAttribute('min', minDate.toISOString().split('T')[0]);
     dobInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
-
-    if (localStorage.getItem('registrationData')) {
-        const savedData = JSON.parse(localStorage.getItem('registrationData'));
-        populateTable(savedData);
-    }
+    loadSavedData();
 
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -44,4 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
             newRow.insertCell(4).textContent = entry.acceptTerms;
         });
     }
+    function loadSavedData() {
+        const savedData = JSON.parse(localStorage.getItem('registrationData')) || [];
+        populateTable(savedData);
+    }
+    document.getElementById('clearButton').addEventListener('click', function () {
+        localStorage.removeItem('registrationData');
+        populateTable([]);
+    });
 });
