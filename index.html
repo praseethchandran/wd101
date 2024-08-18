@@ -8,10 +8,9 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 10px;
         }
-        h1 {
-            text-align:center;
-        }
+
         th,
         td {
             border: 1px solid black;
@@ -22,6 +21,10 @@
         .submit-button {
             background-color: green;
             color: white;
+        }
+
+        th {
+            background-color: aliceblue;
         }
 
         .table-heading {
@@ -37,19 +40,19 @@
     <form id="registrationForm">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required><br><br>
-        
+
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
-        
+
         <label for="dob">Date of Birth</label>
         <input type="date" id="dob" name="dob" required><br><br>
-   
+
         <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
         <label for="acceptTerms">Accept Terms & Conditions</label><br><br>
-   
+
         <button type="submit" class="submit-button">Submit</button>
     </form>
     <div class="table-heading" colspan="5">ENTRIES</div>
@@ -60,7 +63,7 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>DOB</th>
-                <th>accepted terms?</th>
+                <th>Accepted Terms?</th>
             </tr>
         </thead>
         <tbody>
