@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const dob = document.getElementById('dob').value;
-        const acceptTerms = document.getElementById('acceptTerms').checked ? "True" : "False";
+        const acceptTerms = document.getElementById('acceptTerms').checked ? "true" : "false";
 
         const formData = { name, email, password, dob, acceptTerms };
 
